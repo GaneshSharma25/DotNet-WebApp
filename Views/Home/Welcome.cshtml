@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        h4 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome @Model.FirstName @Model.LastName</h1>
+
+    <h4>Employee Details</h4>
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>FirstName:</td>
+            <td>@Model.FirstName</td>
+        </tr>
+        <tr>
+            <td>LastName:</td>
+            <td>@Model.LastName</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td>@Model.Salary</td>
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <td>
+                <a href="\Home\EmpList">GET DETAILS OF ALL EMPLOYEE</a>
+            </td>
+        </tr>
+        
+    </table>
+</body>
+</html>

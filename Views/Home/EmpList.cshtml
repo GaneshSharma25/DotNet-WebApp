@@ -1,0 +1,70 @@
+﻿@model List<Employee>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model)
+            {
+                <tr>
+                    <td>@e.FirstName</td>
+                    <td>@e.LastName</td>
+                    <td>@e.Email</td>
+                    <td>@e.Salary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+
+</html>
